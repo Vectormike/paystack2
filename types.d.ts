@@ -107,3 +107,24 @@ declare interface UpdatePlanOptions {
     currency?: string;
     invoice_limit?: number;
 }
+
+declare interface CardOptions {
+    email: string;
+    amount: string | number;
+    card: {
+        number: string;
+        cvv: string;
+        expiry_month: string;
+        expiry_year: string;
+    };
+    pin: string;
+}
+
+declare interface BankOptions {
+    email: string;
+    amount: string | number;
+    bank: {
+        code: string;
+        account_number: string;
+    };
+}
